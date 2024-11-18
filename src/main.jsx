@@ -1,13 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-// import './index.css'
-import App from './App.jsx'
-// bootstrap css
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+// import './index.css';
+import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import store from './Redux/Store'; // تأكد أن المسار صحيح
+import { Provider } from 'react-redux';
 
-
-createRoot(document.getElementById('root')).render(
+const root = createRoot(document.getElementById('root')); // استخدام createRoot
+root.render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </StrictMode>
+);
+
