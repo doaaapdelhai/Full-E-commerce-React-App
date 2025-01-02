@@ -4,23 +4,16 @@ import ImageGallery from "react-image-gallery";
 import mobile from '../../images/mobile.png'
 import LeftButton from "./LeftButton";
 import RightButton from "./RightButton";
+import { useParams } from "react-router-dom";
+import ViewProductDetailsHook from "../../Hook/products/View-product-details-hook";
 const ProductGallery = () => {
-    const images = [
-        {
-          original: `${mobile}`,
-            },
-        {
-          original: `${mobile}`,
-        },
-        {
-          original: `${mobile}`,
-        },
-      ];
+  const {id} = useParams();
+  const [item , images] = ViewProductDetailsHook(id);
+
   return (
     <div className="product-gallary-card d-flex justify-content-center align-items-center pt-2">
     <ImageGallery 
       items={images} 
-      defaultImage={mobile} 
       showFullscreenButton={false} 
       isRTL={true} 
       showPlayButton={false} 

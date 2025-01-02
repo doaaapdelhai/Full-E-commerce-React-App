@@ -1,7 +1,8 @@
-import { GET_ALL_CATEGORY , GET_ERROR} from '../Type'; 
+import { GET_ALL_CATEGORY , GET_ERROR , CREATE_CATEGORY, GET_ONE_CATEGORY} from '../Type'; 
 
 const initialState = {
   category: [],
+  oneCategory:[],
   loading: true,
 };
 
@@ -11,9 +12,20 @@ const categoryReducer = (state = initialState, action) => {
       return {
         ...state,
         category: action.payload,
-        loading: false, // Changed semicolon to comma
+        loading: false,
       }
-      case GET_ERROR : return {
+    case GET_ONE_CATEGORY:
+      return {
+        oneCategory: action.payload,
+        loading: false,
+      }
+      case CREATE_CATEGORY:
+      return{
+        category: action.payload,
+        loading: false,
+      }
+      case GET_ERROR : 
+      return {
         loading:true  , 
         category:action.payload,
       }

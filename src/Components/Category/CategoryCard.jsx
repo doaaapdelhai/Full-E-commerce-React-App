@@ -12,8 +12,8 @@ const CategoryCard = ({ img ,background , title}) => {
       <div className="allCard mb-3 ">
         <div
           className="categoty-card "
-          style={{ backgroundColor: `${background}` }}></div>{" "}
-        <img alt="zcv" src={img} className="categoty-card-img" />
+          style={{ backgroundColor: `${background}` }}></div>
+        <img alt="alt_img" src={img} className="categoty-card-img" />
         <p className="categoty-card-text my-2"> {title}</p>
       </div>
     </Col>
@@ -21,3 +21,7 @@ const CategoryCard = ({ img ,background , title}) => {
 };
 
 export default CategoryCard;
+
+
+
+

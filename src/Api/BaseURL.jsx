@@ -1,9 +1,6 @@
-import axios from "axios";
+import axios from 'axios'
 
-const baseUrl = axios.create({
-    // for example
-  baseURL: 'https://jsonplaceholder.typicode.com/posts'
-});
 
-export default baseUrl;
+const baseUrl = axios.create({ baseURL: "http://127.0.0.1:8000" })
 
+export default baseUrl

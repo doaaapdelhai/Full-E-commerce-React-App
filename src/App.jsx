@@ -24,6 +24,7 @@ import UserAllAddresPage from './page/User/UserAllAddresPage';
 import UserAddAddressPage from './page/User/UserAddAddressPage';
 import UserEditAddressPage from './page/User/UserEditAddressPage';
 import UserProfilePage from './page/User/UserProfilePage';
+import AdminEditeProductsPage from './page/Admin/AdminEditeProductsPage';
 
 const App = () => {
   return (
@@ -53,6 +54,8 @@ const App = () => {
           <Route path='/user/add-address' element={<UserAddAddressPage />} /> 
           <Route path='/user/edit-address' element={<UserEditAddressPage />} />
           <Route path='/user/profile' element={<UserProfilePage />} />
+          <Route path='/admin/editeproduct/:id' element={<AdminEditeProductsPage />} />
+
         </Routes>
       </BrowserRouter>
       <Footer/>
